@@ -1,10 +1,707 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>App Landing Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hamargus Technologies — mobile apps đơn giản, dễ sử dụng cho mọi người." />
+  <title>Hamargus Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #533afd;
+      --primary-deep: #4434d4;
+      --primary-press: #2e2b8c;
+      --primary-soft: #665efd;
+      --primary-subdued: #b9b9f9;
+      --brand-dark-900: #1c1e54;
+      --ruby: #ea2261;
+      --magenta: #f96bee;
+      --lemon: #9b6829;
+      --canvas: #ffffff;
+      --canvas-soft: #f6f9fc;
+      --canvas-cream: #f5e9d4;
+      --hairline: #e3e8ee;
+      --ink: #0d253d;
+      --ink-secondary: #273951;
+      --ink-mute: #64748d;
+      --on-primary: #ffffff;
+      --shadow-sm: rgba(0, 55, 112, 0.08) 0 1px 3px;
+      --shadow-md: rgba(0, 55, 112, 0.08) 0 8px 24px, rgba(0, 55, 112, 0.04) 0 2px 6px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --radius-pill: 9999px;
+      --max-width: 1080px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "SF Pro Display", system-ui, -apple-system, sans-serif;
+      font-feature-settings: "ss01";
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Gradient mesh hero ── */
+    .hero-mesh {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 20%, rgba(245, 233, 212, 0.95) 0%, transparent 55%),
+        radial-gradient(ellipse 70% 55% at 85% 15%, rgba(249, 107, 238, 0.35) 0%, transparent 50%),
+        radial-gradient(ellipse 65% 50% at 55% 35%, rgba(83, 58, 253, 0.28) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 75% 60%, rgba(234, 34, 97, 0.22) 0%, transparent 50%),
+        linear-gradient(180deg, #faf8ff 0%, #f6f9fc 55%, #ffffff 100%);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .hero-mesh::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(255, 255, 255, 0.85) 100%);
+      pointer-events: none;
+    }
+
+    .container {
+      width: min(100% - 48px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 24px 0;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand-mark img {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--primary);
+      background: var(--canvas);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 48px 0 96px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary-deep);
+      background: var(--primary-subdued);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.03;
+      letter-spacing: -1.4px;
+      color: var(--ink);
+    }
+
+    .lead {
+      margin: 0 0 32px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+      max-width: 34ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--on-primary);
+      background: var(--primary);
+      border: none;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-press);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--primary);
+      background: var(--canvas);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(83, 58, 253, 0.06);
+    }
+
+    .logo-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-frame {
+      width: min(100%, 320px);
+      aspect-ratio: 1;
+      border-radius: var(--radius-xl);
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ── Mission section ── */
+    .mission {
+      padding: 96px 0;
+      background: var(--canvas-soft);
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.64px;
+      color: var(--ink);
+    }
+
+    .section-intro {
+      margin: 0 0 48px;
+      font-size: 16px;
+      color: var(--ink-secondary);
+      max-width: 58ch;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-cream {
+      background: var(--canvas-cream);
+      border-color: rgba(155, 104, 41, 0.15);
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--primary-subdued);
+      color: var(--primary-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.2px;
+      color: var(--ink);
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--ink-mute);
+      line-height: 1.55;
+    }
+
+    /* ── App highlight ── */
+    .app-band {
+      padding: 96px 0;
+      background: var(--canvas);
+    }
+
+    .app-panel {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      align-items: center;
+      background: var(--brand-dark-900);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      color: var(--on-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .app-panel h2 {
+      color: var(--on-primary);
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+
+    .app-panel p {
+      margin: 0 0 24px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .app-panel .btn-primary {
+      background: var(--primary);
+    }
+
+    .app-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .meta-item {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+    }
+
+    .meta-item strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.39px;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 4px;
+    }
+
+    .meta-item span {
+      font-size: 15px;
+      color: var(--on-primary);
+    }
+
+    /* ── Legal ── */
+    .legal {
+      padding: 64px 0 96px;
+      background: var(--canvas-soft);
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .legal-card {
+      display: block;
+      padding: 28px 32px;
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .legal-card:hover {
+      border-color: var(--primary-soft);
+      box-shadow: var(--shadow-md);
+    }
+
+    .legal-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .legal-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--ink-mute);
+    }
+
+    .legal-card .link-arrow {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--hairline);
+      background: var(--canvas);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      margin: 0;
+      font-size: 13px;
+      color: var(--ink-mute);
+      letter-spacing: -0.39px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--ink-mute);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding-bottom: 64px;
+      }
+
+      .logo-showcase {
+        order: -1;
+      }
+
+      .logo-frame {
+        width: min(100%, 240px);
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .app-panel {
+        grid-template-columns: 1fr;
+        padding: 32px;
+      }
+
+      .legal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(100% - 32px, var(--max-width));
+      }
+
+      .brand-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Website for My App</h1>
-  <p>File app-ads.txt có thể truy cập tại <a href="app-ads.txt">app-ads.txt</a></p>
+  <div class="hero-mesh">
+    <header class="container">
+      <div class="brand-row">
+        <a class="brand-mark" href="#top" aria-label="Hamargus Technologies">
+          <img src="./unnamed.jpg" alt="Hamargus Technologies logo" width="44" height="44" />
+          <span class="brand-name">Hamargus Technologies</span>
+        </a>
+        <a class="nav-link" href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies" target="_blank" rel="noopener noreferrer">
+          Google Play
+        </a>
+      </div>
+    </header>
+
+    <section class="hero container" id="top">
+      <div class="hero-content">
+        <span class="eyebrow">Mobile apps · Đơn giản · Dễ dùng</span>
+        <h1>Hamargus Technologies</h1>
+        <p class="lead">
+          Một sản phẩm cá nhân đang cố gắng tạo ra các ứng dụng di động có xu hướng
+          <strong>dễ sử dụng</strong>, <strong>đơn giản</strong> — dành cho mọi người,
+          không cần phải là chuyên gia công nghệ.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814 13.792 12 3.61 22.186a1.003 1.003 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.348 8.635-8.65zm3.199-3.198 2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658l10.937 6.348-2.303 2.303L5.864 2.658z"/></svg>
+            Xem trên Google Play
+          </a>
+          <a class="btn-secondary" href="#about">Tìm hiểu thêm</a>
+        </div>
+      </div>
+
+      <div class="logo-showcase" aria-hidden="true">
+        <div class="logo-frame">
+          <img src="./unnamed.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="mission" id="about">
+    <div class="container">
+      <p class="section-label">Triết lý</p>
+      <h2>App nhỏ, trải nghiệm lớn</h2>
+      <p class="section-intro">
+        Hamargus Technologies bắt đầu từ một dự án cá nhân với mục tiêu rõ ràng:
+        làm những app di động mà bạn mở lên là hiểu ngay, dùng được ngay — không rườm rà,
+        không phức tạp không cần thiết.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">◎</div>
+          <h3>Dễ sử dụng</h3>
+          <p>
+            Giao diện trực quan, thao tác ít bước. Mọi tính năng đều hướng tới người dùng
+            phổ thông — từ học sinh, nhóm bạn đến gia đình.
+          </p>
+        </article>
+        <article class="card card-cream">
+          <div class="card-icon" aria-hidden="true">◈</div>
+          <h3>Đơn giản</h3>
+          <p>
+            Loại bỏ những thứ thừa. Mỗi màn hình tập trung vào một việc và làm việc đó
+            thật tốt — nhẹ, nhanh, dễ nhớ.
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">✦</div>
+          <h3>Cho mọi người</h3>
+          <p>
+            Không yêu cầu tài khoản phức tạp hay cài đặt khó hiểu. App sinh ra để phục vụ
+            nhu cầu hàng ngày của bất kỳ ai.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="app-band">
+    <div class="container">
+      <div class="app-panel">
+        <div>
+          <p class="section-label" style="color: rgba(255,255,255,0.5);">Ứng dụng</p>
+          <h2>SpinWin Wheel — Random Picker</h2>
+          <p>
+            Vòng quay may mắn và nhiều mini-game giải trí — một trong những sản phẩm
+            đầu tiên của Hamargus Technologies trên Google Play.
+          </p>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Khám phá trên Play Store
+          </a>
+        </div>
+        <div class="app-meta">
+          <div class="meta-item">
+            <strong>Nhà phát triển</strong>
+            <span>Hamargus Technologies</span>
+          </div>
+          <div class="meta-item">
+            <strong>Nền tảng</strong>
+            <span>Android · Google Play</span>
+          </div>
+          <div class="meta-item">
+            <strong>Phong cách</strong>
+            <span>Giải trí · Ngẫu nhiên · Nhóm bạn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="legal">
+    <div class="container">
+      <p class="section-label">Pháp lý</p>
+      <h2>Điều khoản &amp; quyền riêng tư</h2>
+      <p class="section-intro">
+        Các chính sách dưới đây áp dụng cho ứng dụng SpinWin Wheel — Random Picker
+        và các sản phẩm liên quan của Hamargus Technologies.
+      </p>
+
+      <div class="legal-grid">
+        <a
+          class="legal-card"
+          href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Terms &amp; Conditions</h3>
+          <p>Điều khoản sử dụng dịch vụ — quyền và nghĩa vụ khi dùng ứng dụng.</p>
+          <span class="link-arrow">Đọc Terms &amp; Conditions →</span>
+        </a>
+        <a
+          class="legal-card"
+          href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Privacy Policy</h3>
+          <p>Chính sách quyền riêng tư — cách thu thập, sử dụng và bảo vệ thông tin.</p>
+          <span class="link-arrow">Đọc Privacy Policy →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year"></span> Hamargus Technologies. Made with care for everyday users.</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies" target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2" target="_blank" rel="noopener noreferrer">Terms</a>
+        <a href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862" target="_blank" rel="noopener noreferrer">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
