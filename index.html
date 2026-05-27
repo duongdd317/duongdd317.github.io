@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hamargus Technologies — mobile apps đơn giản, dễ sử dụng cho mọi người." />
+  <meta name="description"
+    content="Hamargus Technologies — simple, easy-to-use mobile apps for everyone. SpinWin Wheel - Random Picker on Google Play." />
   <title>Hamargus Technologies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +18,6 @@
       --primary-soft: #665efd;
       --primary-subdued: #b9b9f9;
       --brand-dark-900: #1c1e54;
-      --ruby: #ea2261;
-      --magenta: #f96bee;
-      --lemon: #9b6829;
       --canvas: #ffffff;
       --canvas-soft: #f6f9fc;
       --canvas-cream: #f5e9d4;
@@ -35,7 +34,9 @@
       --max-width: 1080px;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
@@ -53,7 +54,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Gradient mesh hero ── */
     .hero-mesh {
       position: relative;
       overflow: hidden;
@@ -79,7 +79,6 @@
       margin: 0 auto;
     }
 
-    /* ── Header ── */
     header {
       position: relative;
       z-index: 1;
@@ -115,6 +114,12 @@
       letter-spacing: -0.2px;
     }
 
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .nav-link {
       font-size: 14px;
       font-weight: 500;
@@ -132,7 +137,6 @@
       color: var(--on-primary);
     }
 
-    /* ── Hero ── */
     .hero {
       position: relative;
       z-index: 1;
@@ -162,16 +166,13 @@
       font-weight: 300;
       line-height: 1.03;
       letter-spacing: -1.4px;
-      color: var(--ink);
     }
 
     .lead {
       margin: 0 0 32px;
       font-size: 18px;
-      font-weight: 400;
-      line-height: 1.6;
       color: var(--ink-secondary);
-      max-width: 34ch;
+      max-width: 38ch;
     }
 
     .hero-actions {
@@ -193,7 +194,6 @@
       border: none;
       border-radius: var(--radius-pill);
       text-decoration: none;
-      cursor: pointer;
       box-shadow: var(--shadow-sm);
       transition: background 0.15s ease, transform 0.15s ease;
     }
@@ -221,7 +221,7 @@
       border: 1px solid var(--primary);
       border-radius: var(--radius-pill);
       text-decoration: none;
-      transition: background 0.15s ease, color 0.15s ease;
+      transition: background 0.15s ease;
     }
 
     .btn-secondary:hover {
@@ -231,20 +231,18 @@
     .logo-showcase {
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     .logo-frame {
       width: min(100%, 320px);
       aspect-ratio: 1;
       border-radius: var(--radius-xl);
-      background: #000000;
+      background: #000;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 32px;
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .logo-frame img {
@@ -253,7 +251,6 @@
       object-fit: contain;
     }
 
-    /* ── Mission section ── */
     .mission {
       padding: 96px 0;
       background: var(--canvas-soft);
@@ -274,14 +271,13 @@
       font-weight: 300;
       line-height: 1.1;
       letter-spacing: -0.64px;
-      color: var(--ink);
     }
 
     .section-intro {
       margin: 0 0 48px;
       font-size: 16px;
       color: var(--ink-secondary);
-      max-width: 58ch;
+      max-width: 62ch;
     }
 
     .cards {
@@ -321,7 +317,6 @@
       font-size: 20px;
       font-weight: 300;
       letter-spacing: -0.2px;
-      color: var(--ink);
     }
 
     .card p {
@@ -331,72 +326,181 @@
       line-height: 1.55;
     }
 
-    /* ── App highlight ── */
+    /* ── Featured app ── */
     .app-band {
       padding: 96px 0;
       background: var(--canvas);
     }
 
-    .app-panel {
+    .app-showcase {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1fr 1.1fr;
       gap: 48px;
-      align-items: center;
-      background: var(--brand-dark-900);
-      border-radius: var(--radius-xl);
-      padding: 48px;
-      color: var(--on-primary);
-      box-shadow: var(--shadow-md);
+      align-items: start;
     }
 
-    .app-panel h2 {
-      color: var(--on-primary);
-      font-size: 32px;
+    .app-visual img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      display: block;
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .app-title-block h2 {
+      margin: 0 0 4px;
+      font-size: 28px;
       letter-spacing: -0.64px;
     }
 
-    .app-panel p {
-      margin: 0 0 24px;
-      font-size: 16px;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.78);
+    .app-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary-deep);
+      background: var(--primary-subdued);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
     }
 
-    .app-panel .btn-primary {
+    .app-desc {
+      margin: 0 0 20px;
+      font-size: 16px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+    }
+
+    .feature-list {
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .feature-list li {
+      font-size: 15px;
+      color: var(--ink-secondary);
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
       background: var(--primary);
     }
 
-    .app-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .meta-item {
-      padding: 16px 20px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-lg);
-    }
-
-    .meta-item strong {
-      display: block;
-      font-size: 13px;
+    .feature-list strong {
+      color: var(--ink);
       font-weight: 500;
-      letter-spacing: -0.39px;
-      color: rgba(255, 255, 255, 0.55);
-      margin-bottom: 4px;
     }
 
-    .meta-item span {
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .pill-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary-deep);
+      background: var(--primary-subdued);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .app-note {
+      margin: 24px 0 0;
+      padding: 16px 20px;
+      background: var(--canvas-soft);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      font-size: 14px;
+      color: var(--ink-mute);
+      line-height: 1.55;
+    }
+
+    /* ── Coming soon ── */
+    .coming-soon {
+      padding: 96px 0;
+      background: var(--canvas-soft);
+    }
+
+    .soon-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .soon-card {
+      background: var(--canvas);
+      border: 1px dashed var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .soon-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .soon-badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      background: var(--canvas-soft);
+      border: 1px solid var(--hairline);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+    }
+
+    .soon-card p {
+      margin: 0;
       font-size: 15px;
-      color: var(--on-primary);
+      color: var(--ink-mute);
+      line-height: 1.55;
     }
 
     /* ── Legal ── */
     .legal {
       padding: 64px 0 96px;
-      background: var(--canvas-soft);
+      background: var(--canvas);
     }
 
     .legal-grid {
@@ -408,7 +512,7 @@
     .legal-card {
       display: block;
       padding: 28px 32px;
-      background: var(--canvas);
+      background: var(--canvas-soft);
       border: 1px solid var(--hairline);
       border-radius: var(--radius-lg);
       text-decoration: none;
@@ -426,7 +530,6 @@
       margin: 0 0 8px;
       font-size: 18px;
       font-weight: 400;
-      color: var(--ink);
     }
 
     .legal-card p {
@@ -443,7 +546,6 @@
       color: var(--primary);
     }
 
-    /* ── Footer ── */
     footer {
       padding: 32px 0 48px;
       border-top: 1px solid var(--hairline);
@@ -462,7 +564,6 @@
       margin: 0;
       font-size: 13px;
       color: var(--ink-mute);
-      letter-spacing: -0.39px;
     }
 
     .footer-links {
@@ -482,12 +583,12 @@
       color: var(--primary);
     }
 
-    /* ── Responsive ── */
     @media (max-width: 900px) {
-      .hero {
+
+      .hero,
+      .app-showcase {
         grid-template-columns: 1fr;
-        gap: 48px;
-        padding-bottom: 64px;
+        gap: 40px;
       }
 
       .logo-showcase {
@@ -498,15 +599,8 @@
         width: min(100%, 240px);
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .app-panel {
-        grid-template-columns: 1fr;
-        padding: 32px;
-      }
-
+      .cards,
+      .soon-grid,
       .legal-grid {
         grid-template-columns: 1fr;
       }
@@ -534,6 +628,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="hero-mesh">
     <header class="container">
@@ -542,32 +637,34 @@
           <img src="./unnamed.jpg" alt="Hamargus Technologies logo" width="44" height="44" />
           <span class="brand-name">Hamargus Technologies</span>
         </a>
-        <a class="nav-link" href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies" target="_blank" rel="noopener noreferrer">
-          Google Play
-        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="#app">SpinWin Wheel</a>
+          <a class="nav-link" href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies"
+            target="_blank" rel="noopener noreferrer">Google Play</a>
+        </nav>
       </div>
     </header>
 
     <section class="hero container" id="top">
       <div class="hero-content">
-        <span class="eyebrow">Mobile apps · Đơn giản · Dễ dùng</span>
+        <span class="eyebrow">Mobile apps · Simple · Easy to use</span>
         <h1>Hamargus Technologies</h1>
         <p class="lead">
-          Một sản phẩm cá nhân đang cố gắng tạo ra các ứng dụng di động có xu hướng
-          <strong>dễ sử dụng</strong>, <strong>đơn giản</strong> — dành cho mọi người,
-          không cần phải là chuyên gia công nghệ.
+          A personal project focused on building mobile apps that are
+          <strong>easy to use</strong> and <strong>simple</strong> — for everyone,
+          not just tech experts.
         </p>
         <div class="hero-actions">
-          <a
-            class="btn-primary"
-            href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814 13.792 12 3.61 22.186a1.003 1.003 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.348 8.635-8.65zm3.199-3.198 2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658l10.937 6.348-2.303 2.303L5.864 2.658z"/></svg>
-            Xem trên Google Play
+          <a class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.hamargustech.wheelapp.wheel_app" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3.609 1.814 13.792 12 3.61 22.186a1.003 1.003 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.348 8.635-8.65zm3.199-3.198 2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658l10.937 6.348-2.303 2.303L5.864 2.658z" />
+            </svg>
+            Get SpinWin Wheel
           </a>
-          <a class="btn-secondary" href="#about">Tìm hiểu thêm</a>
+          <a class="btn-secondary" href="#about">Learn more</a>
         </div>
       </div>
 
@@ -581,109 +678,154 @@
 
   <section class="mission" id="about">
     <div class="container">
-      <p class="section-label">Triết lý</p>
-      <h2>App nhỏ, trải nghiệm lớn</h2>
+      <p class="section-label">Philosophy</p>
+      <h2>Small apps, big experiences</h2>
       <p class="section-intro">
-        Hamargus Technologies bắt đầu từ một dự án cá nhân với mục tiêu rõ ràng:
-        làm những app di động mà bạn mở lên là hiểu ngay, dùng được ngay — không rườm rà,
-        không phức tạp không cần thiết.
+        Hamargus Technologies started as a solo effort with one clear goal: build mobile apps
+        you can open and understand instantly — no clutter, no unnecessary complexity.
       </p>
 
       <div class="cards">
         <article class="card">
           <div class="card-icon" aria-hidden="true">◎</div>
-          <h3>Dễ sử dụng</h3>
+          <h3>Easy to use</h3>
           <p>
-            Giao diện trực quan, thao tác ít bước. Mọi tính năng đều hướng tới người dùng
-            phổ thông — từ học sinh, nhóm bạn đến gia đình.
+            Intuitive interfaces with minimal steps. Built for everyday users — friends,
+            families, and anyone who just wants something that works.
           </p>
         </article>
         <article class="card card-cream">
           <div class="card-icon" aria-hidden="true">◈</div>
-          <h3>Đơn giản</h3>
+          <h3>Simple</h3>
           <p>
-            Loại bỏ những thứ thừa. Mỗi màn hình tập trung vào một việc và làm việc đó
-            thật tốt — nhẹ, nhanh, dễ nhớ.
+            Every screen focuses on one job and does it well — light, fast, and easy to remember.
           </p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">✦</div>
-          <h3>Cho mọi người</h3>
+          <h3>For everyone</h3>
           <p>
-            Không yêu cầu tài khoản phức tạp hay cài đặt khó hiểu. App sinh ra để phục vụ
-            nhu cầu hàng ngày của bất kỳ ai.
+            No complicated accounts or confusing settings. Apps made for real daily needs.
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="app-band">
+  <section class="app-band" id="app">
     <div class="container">
-      <div class="app-panel">
-        <div>
-          <p class="section-label" style="color: rgba(255,255,255,0.5);">Ứng dụng</p>
-          <h2>SpinWin Wheel — Random Picker</h2>
-          <p>
-            Vòng quay may mắn và nhiều mini-game giải trí — một trong những sản phẩm
-            đầu tiên của Hamargus Technologies trên Google Play.
+      <p class="section-label">Available now</p>
+      <h2>SpinWin Wheel — Random Picker</h2>
+      <p class="section-intro">
+        The ultimate app for random fun, quick decisions, and group entertainment —
+        whether you're with friends, family, or at a party.
+      </p>
+
+      <div class="app-showcase">
+        <div class="app-visual">
+          <img src="./spinwin-wheel-feature.png" alt="SpinWin Wheel app — Spin the Wheel, Truth or Dare, and Duck Race"
+            width="520" height="520" loading="lazy" />
+        </div>
+
+        <div class="app-details">
+          <div class="app-header">
+            <img class="app-icon" src="./spinwin-wheel-feature.png" alt="SpinWin Wheel app icon" width="72"
+              height="72" />
+            <div class="app-title-block">
+              <span class="app-badge">Free · Android</span>
+              <h2>SpinWin Wheel</h2>
+            </div>
+          </div>
+
+          <p class="app-desc">
+            SpinWin Wheel packs multiple classic party games into one app: spin custom wheels,
+            race animated ducks, play Truth or Dare, and enjoy drinking-game modes — all designed
+            to keep any gathering fun and unpredictable.
           </p>
-          <a
-            class="btn-primary"
-            href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Khám phá trên Play Store
+
+          <ul class="feature-list">
+            <li><strong>Spin the Wheel</strong> — Create custom wheels with your own options. Pick winners, assign
+              tasks, or add surprise to any event.</li>
+            <li><strong>Duck Race</strong> — Bet on adorable animated ducks in a light-hearted, competitive race.</li>
+            <li><strong>Truth or Dare</strong> — The classic social game with a fun twist. Perfect for any group.</li>
+            <li><strong>Drinking Game</strong> — Interactive party modes with customizable rules. Play responsibly.</li>
+          </ul>
+
+          <div class="highlights">
+            <span class="pill-tag">Multiple games in one</span>
+            <span class="pill-tag">Customizable</span>
+            <span class="pill-tag">Free to play</span>
+            <span class="pill-tag">No personal data collected</span>
+          </div>
+
+          <a class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.hamargustech.wheelapp.wheel_app" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3.609 1.814 13.792 12 3.61 22.186a1.003 1.003 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.348 8.635-8.65zm3.199-3.198 2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658l10.937 6.348-2.303 2.303L5.864 2.658z" />
+            </svg>
+            Download on Google Play
           </a>
         </div>
-        <div class="app-meta">
-          <div class="meta-item">
-            <strong>Nhà phát triển</strong>
-            <span>Hamargus Technologies</span>
-          </div>
-          <div class="meta-item">
-            <strong>Nền tảng</strong>
-            <span>Android · Google Play</span>
-          </div>
-          <div class="meta-item">
-            <strong>Phong cách</strong>
-            <span>Giải trí · Ngẫu nhiên · Nhóm bạn</span>
-          </div>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coming-soon" id="coming-soon">
+    <div class="container">
+      <p class="section-label">Roadmap</p>
+      <h2>More apps coming soon</h2>
+      <p class="section-intro">
+        Hamargus Technologies is working on new tools that follow the same philosophy —
+        simple, useful, and built for everyday people.
+      </p>
+
+      <div class="soon-grid">
+        <article class="soon-card">
+          <h3>
+            PDF Scan
+            <span class="soon-badge">Coming soon</span>
+          </h3>
+          <p>
+            A clean document scanner for turning photos into PDFs — fast capture,
+            simple editing, and easy sharing when you need it.
+          </p>
+        </article>
+        <article class="soon-card">
+          <h3>
+            QR Code
+            <span class="soon-badge">Coming soon</span>
+          </h3>
+          <p>
+            A lightweight QR code reader and generator — scan links and contacts in seconds,
+            or create your own codes without hassle.
+          </p>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="legal" id="legal">
     <div class="container">
-      <p class="section-label">Pháp lý</p>
-      <h2>Điều khoản &amp; quyền riêng tư</h2>
+      <p class="section-label">Legal</p>
+      <h2>Terms &amp; Privacy</h2>
       <p class="section-intro">
-        Các chính sách dưới đây áp dụng cho ứng dụng SpinWin Wheel — Random Picker
-        và các sản phẩm liên quan của Hamargus Technologies.
+        These policies apply to SpinWin Wheel — Random Picker and related Hamargus Technologies products.
       </p>
 
       <div class="legal-grid">
-        <a
-          class="legal-card"
-          href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="legal-card" href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2"
+          target="_blank" rel="noopener noreferrer">
           <h3>Terms &amp; Conditions</h3>
-          <p>Điều khoản sử dụng dịch vụ — quyền và nghĩa vụ khi dùng ứng dụng.</p>
-          <span class="link-arrow">Đọc Terms &amp; Conditions →</span>
+          <p>Service terms — your rights and responsibilities when using our apps.</p>
+          <span class="link-arrow">Read Terms &amp; Conditions →</span>
         </a>
-        <a
-          class="legal-card"
-          href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="legal-card" href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862"
+          target="_blank" rel="noopener noreferrer">
           <h3>Privacy Policy</h3>
-          <p>Chính sách quyền riêng tư — cách thu thập, sử dụng và bảo vệ thông tin.</p>
-          <span class="link-arrow">Đọc Privacy Policy →</span>
+          <p>How we collect, use, and protect your information.</p>
+          <span class="link-arrow">Read Privacy Policy →</span>
         </a>
       </div>
     </div>
@@ -692,10 +834,15 @@
   <footer>
     <div class="container footer-inner">
       <p class="footer-copy">© <span id="year"></span> Hamargus Technologies. Made with care for everyday users.</p>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies" target="_blank" rel="noopener noreferrer">Google Play</a>
-        <a href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2" target="_blank" rel="noopener noreferrer">Terms</a>
-        <a href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862" target="_blank" rel="noopener noreferrer">Privacy</a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://play.google.com/store/apps/details?id=com.hamargustech.wheelapp.wheel_app" target="_blank"
+          rel="noopener noreferrer">SpinWin Wheel</a>
+        <a href="https://play.google.com/store/apps/developer?id=Hamargus+Technologies" target="_blank"
+          rel="noopener noreferrer">Google Play</a>
+        <a href="https://www.freeprivacypolicy.com/live/fc0e552e-a37a-494c-854a-9e9da7957eb2" target="_blank"
+          rel="noopener noreferrer">Terms</a>
+        <a href="https://www.freeprivacypolicy.com/live/1ea6e817-28f3-48e0-96eb-61ccd3ee0862" target="_blank"
+          rel="noopener noreferrer">Privacy</a>
       </nav>
     </div>
   </footer>
@@ -704,4 +851,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
