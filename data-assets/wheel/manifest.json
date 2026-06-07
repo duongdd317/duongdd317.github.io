@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-03T15:31:34.027512Z",
+  "minAppVersion": "2.1.0",
+  "defaultLocale": "vi",
+  "supportedLocales": [
+    "vi",
+    "en",
+    "ja",
+    "hi",
+    "it",
+    "es",
+    "fil",
+    "pt",
+    "th"
+  ],
+  "categories": [
+    {
+      "id": "youtubers",
+      "file": "categories/youtubers.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 10,
+      "icon": "play_circle",
+      "tags": []
+    },
+    {
+      "id": "anime-challenge-100",
+      "file": "categories/anime-challenge-100.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 20,
+      "icon": "movie",
+      "tags": []
+    },
+    {
+      "id": "what-to-draw",
+      "file": "categories/what-to-draw.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 30,
+      "icon": "brush",
+      "tags": []
+    },
+    {
+      "id": "planet-zoo-animals",
+      "file": "categories/planet-zoo-animals.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 40,
+      "icon": "pets",
+      "tags": []
+    },
+    {
+      "id": "what-animal-are-you",
+      "file": "categories/what-animal-are-you.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 50,
+      "icon": "cruelty_free",
+      "tags": []
+    },
+    {
+      "id": "fun-dares",
+      "file": "categories/fun-dares.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 60,
+      "icon": "celebration",
+      "tags": []
+    },
+    {
+      "id": "c1-football-clubs",
+      "file": "categories/c1-football-clubs.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 70,
+      "icon": "sports_soccer",
+      "tags": []
+    },
+    {
+      "id": "nba-top-100",
+      "file": "categories/nba-top-100.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 80,
+      "icon": "sports_basketball",
+      "tags": []
+    },
+    {
+      "id": "football-players-50",
+      "file": "categories/football-players-50.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 90,
+      "icon": "sports",
+      "tags": []
+    },
+    {
+      "id": "csgo-maps",
+      "file": "categories/csgo-maps.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 100,
+      "icon": "map",
+      "tags": []
+    },
+    {
+      "id": "top-20-games-online",
+      "file": "categories/top-20-games-online.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 110,
+      "icon": "videogame_asset",
+      "tags": []
+    },
+    {
+      "id": "rap-artists",
+      "file": "categories/rap-artists.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 120,
+      "icon": "music_note",
+      "tags": []
+    },
+    {
+      "id": "bigbang-songs",
+      "file": "categories/bigbang-songs.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 130,
+      "icon": "album",
+      "tags": []
+    },
+    {
+      "id": "bts-songs",
+      "file": "categories/bts-songs.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 140,
+      "icon": "album",
+      "tags": []
+    },
+    {
+      "id": "your-iq",
+      "file": "categories/your-iq.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 150,
+      "icon": "psychology",
+      "tags": []
+    },
+    {
+      "id": "your-future-salary",
+      "file": "categories/your-future-salary.json",
+      "version": 1,
+      "enabled": true,
+      "sortOrder": 160,
+      "icon": "payments",
+      "tags": []
+    }
+  ]
+}
