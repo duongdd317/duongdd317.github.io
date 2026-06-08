@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-08T15:14:10.499656Z",
+  "minAppVersion": "2.2.0",
+  "defaultLocale": "vi",
+  "supportedLocales": [
+    "vi",
+    "en",
+    "ja",
+    "hi",
+    "it",
+    "es",
+    "fil",
+    "pt",
+    "th"
+  ],
+  "premiumOnly": true,
+  "requiredEntitlement": "premiumAccess",
+  "categories": [
+    {
+      "id": "house-party",
+      "file": "categories/house-party.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 10,
+      "icon": "home",
+      "tags": [
+        "party",
+        "home",
+        "friends"
+      ],
+      "searchKeywords": [
+        "house",
+        "party",
+        "nhà",
+        "tiệc"
+      ]
+    },
+    {
+      "id": "drinking-game",
+      "file": "categories/drinking-game.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 20,
+      "icon": "local_bar",
+      "tags": [
+        "party",
+        "drinking",
+        "adult"
+      ],
+      "searchKeywords": [
+        "drink",
+        "beer",
+        "uống",
+        "bia"
+      ]
+    },
+    {
+      "id": "birthday-party",
+      "file": "categories/birthday-party.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 30,
+      "icon": "cake",
+      "tags": [
+        "party",
+        "birthday",
+        "celebration"
+      ],
+      "searchKeywords": [
+        "birthday",
+        "sinh nhật",
+        "cake"
+      ]
+    },
+    {
+      "id": "holiday-party",
+      "file": "categories/holiday-party.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 40,
+      "icon": "celebration",
+      "tags": [
+        "party",
+        "holiday",
+        "season"
+      ],
+      "searchKeywords": [
+        "holiday",
+        "lễ",
+        "festive"
+      ]
+    },
+    {
+      "id": "new-year-party",
+      "file": "categories/new-year-party.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 50,
+      "icon": "auto_awesome",
+      "tags": [
+        "party",
+        "new-year",
+        "countdown"
+      ],
+      "searchKeywords": [
+        "new year",
+        "năm mới",
+        "countdown"
+      ]
+    },
+    {
+      "id": "travel-buddies",
+      "file": "categories/travel-buddies.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 60,
+      "icon": "flight",
+      "tags": [
+        "travel",
+        "friends",
+        "trip"
+      ],
+      "searchKeywords": [
+        "travel",
+        "du lịch",
+        "trip",
+        "buddies"
+      ]
+    },
+    {
+      "id": "family-gathering",
+      "file": "categories/family-gathering.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 70,
+      "icon": "family_restroom",
+      "tags": [
+        "family",
+        "gathering",
+        "home"
+      ],
+      "searchKeywords": [
+        "family",
+        "gia đình",
+        "reunion"
+      ]
+    },
+    {
+      "id": "double-date",
+      "file": "categories/double-date.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 80,
+      "icon": "groups_2",
+      "tags": [
+        "couple",
+        "date",
+        "friends"
+      ],
+      "searchKeywords": [
+        "double date",
+        "hẹn đôi",
+        "couples"
+      ]
+    },
+    {
+      "id": "funny",
+      "file": "categories/funny.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 90,
+      "icon": "sentiment_very_satisfied",
+      "tags": [
+        "funny",
+        "humor",
+        "light"
+      ],
+      "searchKeywords": [
+        "funny",
+        "hài",
+        "laugh"
+      ]
+    },
+    {
+      "id": "embarrassing",
+      "file": "categories/embarrassing.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 100,
+      "icon": "face_retouching_natural",
+      "tags": [
+        "embarrassing",
+        "spicy",
+        "confession"
+      ],
+      "searchKeywords": [
+        "embarrassing",
+        "xấu hổ",
+        "awkward"
+      ]
+    },
+    {
+      "id": "silly",
+      "file": "categories/silly.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 110,
+      "icon": "mood",
+      "tags": [
+        "silly",
+        "random",
+        "fun"
+      ],
+      "searchKeywords": [
+        "silly",
+        "ngu ngốc",
+        "goofy"
+      ]
+    },
+    {
+      "id": "meme-challenge",
+      "file": "categories/meme-challenge.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 120,
+      "icon": "gif",
+      "tags": [
+        "meme",
+        "internet",
+        "challenge"
+      ],
+      "searchKeywords": [
+        "meme",
+        "viral",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "prank",
+      "file": "categories/prank.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 130,
+      "icon": "theater_comedy",
+      "tags": [
+        "prank",
+        "mischief",
+        "fun"
+      ],
+      "searchKeywords": [
+        "prank",
+        "trêu",
+        "joke"
+      ]
+    },
+    {
+      "id": "cute-couples",
+      "file": "categories/cute-couples.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 140,
+      "icon": "favorite",
+      "tags": [
+        "couple",
+        "cute",
+        "romance"
+      ],
+      "searchKeywords": [
+        "cute",
+        "couple",
+        "dễ thương"
+      ]
+    },
+    {
+      "id": "romantic",
+      "file": "categories/romantic.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 150,
+      "icon": "favorite_border",
+      "tags": [
+        "couple",
+        "romance",
+        "love"
+      ],
+      "searchKeywords": [
+        "romantic",
+        "lãng mạn",
+        "love"
+      ]
+    },
+    {
+      "id": "deep-questions",
+      "file": "categories/deep-questions.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 160,
+      "icon": "psychology_alt",
+      "tags": [
+        "couple",
+        "deep",
+        "talk"
+      ],
+      "searchKeywords": [
+        "deep",
+        "sâu",
+        "meaningful"
+      ]
+    },
+    {
+      "id": "date-night",
+      "file": "categories/date-night.json",
+      "version": 1,
+      "enabled": true,
+      "premiumOnly": true,
+      "requiredEntitlement": "premiumAccess",
+      "sortOrder": 170,
+      "icon": "nightlife",
+      "tags": [
+        "couple",
+        "date",
+        "night"
+      ],
+      "searchKeywords": [
+        "date night",
+        "hẹn hò",
+        "evening"
+      ]
+    }
+  ]
+}
